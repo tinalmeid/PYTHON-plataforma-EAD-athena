@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r simplemooc/requirements.txt
+    
+    - name: Lint with pylint
+      run: |
+        cd simplemooc
+        pylint --load-plugins pylint_django --django-settings-module=simplemooc.settings --exit-zero **/*.py
+    
+    - name: Run tests with pytest
+      run: |
+        cd simplemooc
+        pytest --tb=short -v
+    
+    - name: Check Django configuration
+      run: |
+        cd simplemooc
+        python manage.py check
