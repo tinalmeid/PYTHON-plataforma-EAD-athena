@@ -1,4 +1,0 @@
-django>=5.1
-pytest-django
-model-bakery
-pylint-django
