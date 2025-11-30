@@ -100,3 +100,7 @@ MEDIA_ROOT = BASE_DIR / 'media' # Cria uma pasta 'media' na raiz do projeto
 
 # --- CUSTOM USER MODEL (O Pulo do Gato) ---
 AUTH_USER_MODEL = 'accounts.User'
+
+# Configuração de E-mail (Enviar para o console em desenvolvimento)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'tinalmeid@gmail.com' # E-mail do Admin

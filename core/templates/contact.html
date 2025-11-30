@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block title %}Contato | {{block.super }}{% endblock %}
+
+{% block content %}
+<div class="content">
+  <div class="pure-g content-ribbon">
+    <div class="pure-u-1">
+      <div class="l-box">
+        <h2>Fale conosco</h2>
+        <p>Você pode entrar em contato conosco por este formulário.</p>
+
+        {% if success_message %}
+        <p style="color: green; font-weight: bold">{{ success_message }}</p>
+        {% endif %}
+
+        <form class="pure-form pure-form-aligned" method="post">
+          {% csrf_token %}
+          <fieldset>
+            {% for field in form %}
+            <div class="pure-control-group">
+              <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+              {{ field }} {% for error in field.errors %}
+              <ul class="errorlist">
+                <li>{{ error }}</li>
+              </ul>
+              {% endfor %}
+            </div>
+            {% endfor %}
+
+            <div class="pure-controls">
+              <button type="submit" class="pure-button primary-button">
+                Enviar Mensagem
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="pure-g content-ribbon">
+    <div class="pure-u-1">
+      <div class="l-box">
+        <h4>Links</h4>
+        <ul>
+          <li>
+            E-mail:
+            <a href="mailto:contato@simplemooc.org">contato@simplemooc.org</a>
+          </li>
+          <li>
+            Twitter: <a href="https://twitter.com/simplemooc">@simplemooc</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
