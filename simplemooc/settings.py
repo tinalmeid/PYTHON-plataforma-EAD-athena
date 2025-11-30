@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     # --- MEUS APPS ---
     'core',
     'accounts',
+    'courses',
 ]
 
 MIDDLEWARE = [
