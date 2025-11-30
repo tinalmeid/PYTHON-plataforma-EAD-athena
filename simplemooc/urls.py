@@ -4,10 +4,12 @@ from core import views # importa as views do core
 from django.urls import include, path # importa include para incluir URLs de outros apps
 from django.conf import settings
 from django.conf.urls.static import static
+from core import views # importa as views do core
 
 urlpatterns = [
     path('', views.home, name='home'), # rota para a página inicial
     path('courses/', include('courses.urls', namespace='courses')), # inclui as URLs do app courses
+    path('contato/', views.contact, name='contact'), # rota para a página de contato
     path('admin/', admin.site.urls),
 ]
 

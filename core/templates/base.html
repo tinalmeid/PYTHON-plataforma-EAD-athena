@@ -22,14 +22,22 @@
         <div class="pure-menu pure-menu-horizontal pure-menu-fixed">
           <a class="pure-menu-heading" href="{% url 'home' %}">SIMPLE MOOC</a>
           <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected">
+            <li
+              class="pure-menu-item{% if request.path == '/' %} pure-menu-selected{% endif %}"
+            >
               <a href="{% url 'home' %}" class="pure-menu-link">Início</a>
             </li>
-            <li class="pure-menu-item">
-              <a href="#" class="pure-menu-link">Cursos</a>
+            <li
+              class="pure-menu-item{% if '/cursos/' in request.path %} pure-menu-selected{% endif %}"
+            >
+              <a href="{% url 'courses:index' %}" class="pure-menu-link"
+                >Cursos</a
+              >
             </li>
-            <li class="pure-menu-item">
-              <a href="#" class="pure-menu-link">Contato</a>
+            <li
+              class="pure-menu-item{% if '/contato/' in request.path %} pure-menu-selected{% endif %}"
+            >
+              <a href="{% url 'contact' %}" class="pure-menu-link">Contato</a>
             </li>
           </ul>
         </div>
