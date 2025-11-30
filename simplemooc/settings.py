@@ -94,5 +94,9 @@ STATIC_URL = 'static/'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# --- Configuração de Media (Uploads) ---
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media' # Cria uma pasta 'media' na raiz do projeto
+
 # --- CUSTOM USER MODEL (O Pulo do Gato) ---
 AUTH_USER_MODEL = 'accounts.User'
