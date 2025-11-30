@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Cadastro | {{
+block.super }}{% endblock %} {% block content %}
+<div class="content">
+  <div class="pure-g-r content-ribbon">
+    <div class="pure-u-1">
+      <div class="l-box">
+        <h2>Crie sua conta</h2>
+        <form class="pure-form pure-form-stacked" method="post">
+          {% csrf_token %} {% if form.non_field_errors %}
+          <ul class="errorlist">
+            {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <fieldset>
+            {{ form.as_p }}
+
+            <div class="pure-controls">
+              <button type="submit" class="pure-button primary-button">
+                Criar Conta
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

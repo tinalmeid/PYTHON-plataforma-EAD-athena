@@ -10,6 +10,7 @@ urlpatterns = [
     path('', views.home, name='home'), # rota para a página inicial
     path('courses/', include('courses.urls', namespace='courses')), # inclui as URLs do app courses
     path('contato/', views.contact, name='contact'), # rota para a página de contato
+    path('contas/', include('accounts.urls', namespace='accounts')), # inclui as URLs do app accounts
     path('admin/', admin.site.urls),
 ]
 
