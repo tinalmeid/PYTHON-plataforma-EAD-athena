@@ -34,15 +34,15 @@ a {
 /* --- Header (Menu) --- */
 .header {
   margin: 0;
-  background-color: #0f172a; /* Azul Noturno */
-  border-bottom: 1px solid #1e293b;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f39112; /* Azul Noturno */
+  border-bottom: 1px solid #04115c;
+  box-shadow: 0 2px 4px #ed3131e4;
 }
 
 .header .pure-menu {
   padding: 0.5em;
   /* Aplica o fundo escuro diretamente no menu */
-  background-color: #0f172a;
+  background-color: #04115c;
 }
 
 .header .pure-menu-heading {
@@ -88,7 +88,7 @@ body .primary-button {
 }
 
 body .primary-button:hover {
-  background-color: #075985;
+  background-color: #da8114;
 }
 
 /* --- Splash / Hero Section (Mantido) --- */

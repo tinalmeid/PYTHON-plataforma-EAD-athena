@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Entrar | {{
+block.super }}{% endblock %} {% block content %}
+<div class="content">
+  <div class="pure-g-r content-ribbon">
+    <div class="pure-u-1">
+      <div class="l-box">
+        <h2>Acesse sua conta</h2>
+
+        <form class="pure-form pure-form-stacked" method="post">
+          {% csrf_token %} {% if form.non_field_errors %}
+          <ul class="errorlist">
+            {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <fieldset>
+            <div class="pure-control-group">
+              <label for="{{ form.username.id_for_label }}">Usuário</label>
+              {{ form.username }} {{ form.username.errors }}
+            </div>
+
+            <div class="pure-control-group">
+              <label for="{{ form.password.id_for_label }}">Senha</label>
+              {{ form.password }} {{ form.password.errors }}
+            </div>
+
+            <div class="pure-controls">
+              <button type="submit" class="pure-button primary-button">
+                Entrar
+              </button>
+            </div>
+          </fieldset>
+
+          <p>
+            Não é cadastrado?
+            <a href="{% url 'accounts:register' %}" title="Cadastre-se"
+              >Cadastre-se</a
+            >
+            <br />
+            Esqueceu a senha? <a href="#" title="Nova senha">Nova senha</a>
+            <br />
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
