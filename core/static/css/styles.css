@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Tema: Plataforma Athena (Blue Modern)
+   Baseado em PureCSS Layout
+   ========================================================================== */
+
+/* --- Reset & Base --- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  line-height: 1.7em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+  color: #334155; /* Cinza azulado escuro para texto (Melhor leitura) */
+  background-color: #f8fafc; /* Fundo muito levemente azulado */
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* --- Layout Utils --- */
+.l-box {
+  padding: 2em;
+}
+
+/* --- Header (Menu) --- */
+.header {
+  margin: 0;
+  background-color: #0f172a; /* Azul Noturno (Dark Slate) */
+  border-bottom: 1px solid #1e293b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .pure-menu {
+  padding: 0.5em;
+}
+
+.header .pure-menu-heading {
+  color: #f8fafc; /* Branco gelo */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header .pure-menu-heading:hover {
+  color: #38bdf8; /* Azul céu no hover */
+}
+
+/* Links do Menu */
+.header .pure-menu li a {
+  color: #cbd5e1; /* Cinza claro */
+}
+
+.header .pure-menu li a:hover,
+.header .pure-menu li a:focus {
+  background: none;
+  border: none;
+  color: #38bdf8; /* Azul destaque */
+}
+
+.header .pure-menu-selected a {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* --- Botões (Acessibilidade Garantida) --- */
+body .primary-button {
+  background-color: #0369a1; /* Azul forte (Contraste OK com branco) */
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.8em 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+body .primary-button:hover {
+  background-color: #075985; /* Azul mais escuro no hover */
+}
+
+/* --- Splash / Hero Section (A parte do Banner) --- */
+.splash {
+  margin: 0;
+  padding: 4em 0;
+  /* Gradiente moderno de azul */
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: white;
+  text-align: center;
+}
+
+.splash .splash-head {
+  font-size: 300%;
+  margin: 0;
+  line-height: 1.2em;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.splash .splash-subhead {
+  color: #bfdbfe; /* Azul bem clarinho para subtítulo */
+  font-weight: 300;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+.splash .primary-button {
+  margin-top: 1.5em;
+  background-color: #fff; /* Botão branco no fundo azul */
+  color: #1e3a8a; /* Texto azul */
+  font-size: 120%;
+}
+
+.splash .primary-button:hover {
+  background-color: #f1f5f9;
+}
+
+/* --- Conteúdo --- */
+.content-ribbon {
+  padding: 2em 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.content-ribbon:nth-child(even) {
+  background-color: #f8fafc; /* Alterna cor de fundo levemente */
+}
+
+.content .content-subhead {
+  color: #0369a1; /* Título em azul médio */
+  padding-bottom: 0.3em;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 2px solid #0ea5e9; /* Linha de destaque azul ciano */
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.l-box h3 {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+  color: #1e293b;
+}
+
+/* --- Footer --- */
+.footer {
+  background: #0f172a; /* Mesmo tom do header */
+  color: #94a3b8;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 90%;
+  border-top: 4px solid #0284c7;
+}

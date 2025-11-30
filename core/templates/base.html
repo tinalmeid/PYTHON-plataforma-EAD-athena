@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Plataforma EAD Athena - Ensino de Qualidade"
+    />
+    <title>Simple MOOC - {% block title %}Home{% endblock %}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <div class="pure-menu pure-menu-horizontal pure-menu-fixed">
+          <a class="pure-menu-heading" href="{% url 'home' %}">SIMPLE MOOC</a>
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected">
+              <a href="{% url 'home' %}" class="pure-menu-link">Início</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Cursos</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {% block content %} {% endblock %}
+
+      <div class="footer">
+        Simple MOOC - Plataforma EAD Athena &copy; {% now "Y" %}
+      </div>
+    </div>
+  </body>
+</html>
