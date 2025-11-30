@@ -174,11 +174,11 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 
 | ID Jira     | Módulo / Tarefa                               | Branch                      | Status          |
 | :---------- | :-------------------------------------------- | :-------------------------- | :-------------- |
-| **ENG-591** | 🏗️ Setup: Ambiente, Django 5.x e Custom User  | `ENG-591-setup-core`        | 🔄 Em Andamento |
-| **ENG-592** | 🎨 Frontend: Integração de Templates e Assets | `ENG-592-frontend-base`     | 📝 A Fazer      |
-| **ENG-593** | 📚 Backend: App Courses e Models              | `ENG-593-courses-models`    | 📝 A Fazer      |
-| **ENG-594** | 🖼️ Frontend: Listagem e Detalhes do Curso     | `ENG-594-courses-views`     | 📝 A Fazer      |
-| **ENG-595** | 📧 Feature: Formulário de Contato             | `ENG-595-contact-form`      | 📝 A Fazer      |
+| **ENG-591** | 🏗️ Setup: Ambiente, Django 5.x e Custom User  | `ENG-591-setup-core`        | ✅ Concluído |
+| **ENG-592** | 🎨 Frontend: Integração de Templates e Assets | `ENG-592-frontend-base`     | ✅ Concluído     |
+| **ENG-593** | 📚 Backend: App Courses e Models              | `ENG-593-courses-models`    | ✅ Concluído      |
+| **ENG-594** | 🖼️ Frontend: Listagem e Detalhes do Curso     | `ENG-594-courses-views`     | ✅ Concluído      |
+| **ENG-595** | 📧 Feature: Formulário de Contato             | `ENG-595-contact-form`      | 🔄 Em Andamento      |
 | **ENG-596** | 🔐 Auth: Login, Logout e Cadastro             | `ENG-596-auth-system`       | 📝 A Fazer      |
 | **ENG-597** | 👤 User: Dashboard e Edição de Perfil         | `ENG-597-user-dashboard`    | 📝 A Fazer      |
 | **ENG-598** | 🔑 Security: Reset de Senha                   | `ENG-598-password-reset`    | 📝 A Fazer      |

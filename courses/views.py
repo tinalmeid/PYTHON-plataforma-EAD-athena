@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Course
 
-# Create your views here.
+def index(request):
+    courses = Course.objects.all()
+    template_name = 'courses/index.html'
+    context = {'courses': courses}
+    return render(request, template_name, context)
+
+def detail(request, slug):
+    course = get_object_or_404(Course, slug=slug)
+    template_name = 'courses/detail.html'
+    context = {'course': course}
+    return render(request, template_name, context)
