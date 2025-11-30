@@ -5,16 +5,18 @@ from .models import User
 class AccountUserCreationForm(UserCreationForm):
     """
     Formulário de criação de usuário customizado.
+    Herdamos do UserCreationForm do Django para garantir a segurança da senha.
     """
-    # Adicione campos que queremos no formulário
+    # Adicionamos o campo email ao formulário
     email = forms.EmailField(label="E-mail")
 
     class Meta:
+        # Apontamos para o nosso model User
         model = User
         fields = ('username', 'email', 'name')
 
     def clean_email(self):
-        """Garante que o e-mail não seja duplicado no sistema."""
+        """Garante que o e-mail não seja duplicado no sistema (Validação customizada)."""
         email = self.cleaned_data['email']
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError("Este e-mail já está cadastrado.")
@@ -24,6 +26,8 @@ class AccountUserChangeForm(UserChangeForm):
     """Formulário de edição de usuário customizado (usado no Admin)."""
     class Meta:
         model = User
+        # Listamos todos os campos que podem ser editados no Admin
         fields = ('username', 'email', 'name', 'is_active', 'is_staff')
 
-    password = None  # Remove o campo de senha do formulário de edição
+    # Removemos o campo de senha do formulário de edição (apenas por boas práticas)
+    password = None
