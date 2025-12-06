@@ -172,24 +172,24 @@ PYTHON-plataforma-EAD-athena/
 
 Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Engenharia.
 
-| ID Jira     | Módulo / Tarefa                               | Branch                      | Status          |
-| :---------- | :-------------------------------------------- | :-------------------------- | :-------------- |
-| **ENG-591** | 🏗️ Setup: Ambiente, Django 5.x e Custom User  | `ENG-591-setup-core`        | ✅ Concluído    |
-| **ENG-592** | 🎨 Frontend: Integração de Templates e Assets | `ENG-592-frontend-base`     | ✅ Concluído    |
-| **ENG-593** | 📚 Backend: App Courses e Models              | `ENG-593-courses-models`    | ✅ Concluído    |
-| **ENG-594** | 🖼️ Frontend: Listagem e Detalhes do Curso     | `ENG-594-courses-views`     | ✅ Concluído    |
-| **ENG-595** | 📧 Feature: Formulário de Contato             | `ENG-595-contact-form`      | ✅ Concluído    |
-| **ENG-596** | 🔐 Auth: Login, Logout e Cadastro             | `ENG-596-auth-system`       | ✅ Concluído    |
-| **ENG-597** | 👤 User: Dashboard e Edição de Perfil         | `ENG-597-user-dashboard`    | 🔄 Em Andamento |
-| **ENG-598** | 🔑 Security: Reset de Senha                   | `ENG-598-password-reset`    | 📝 A Fazer      |
-| **ENG-599** | 🎟️ Core: Motor de Inscrições                  | `ENG-599-enrollment-engine` | 📝 A Fazer      |
-| **ENG-600** | 🎓 UX: Dashboard do Aluno e Decorators        | `ENG-600-student-area`      | 📝 A Fazer      |
-| **ENG-601** | 📢 Feature: Mural de Avisos e E-mails         | `ENG-601-announcements`     | 📝 A Fazer      |
-| **ENG-602** | 📺 Content: Aulas e Materiais                 | `ENG-602-lessons-materials` | 📝 A Fazer      |
-| **ENG-603** | 💬 Forum: Tópicos e Respostas                 | `ENG-603-forum-structure`   | 📝 A Fazer      |
-| **ENG-604** | ✅ Feature: Resposta Correta e Ajax           | `ENG-604-forum-ajax`        | 📝 A Fazer      |
-| **ENG-605** | 🧪 QA: Testes Automatizados                   | `ENG-605-tests-coverage`    | 📝 A Fazer      |
-| **ENG-606** | 🚀 DevOps: Preparação para Deploy             | `ENG-606-production-ready`  | 📝 A Fazer      |
+| ID Jira     | Módulo / Tarefa                               | Branch                      | Status       |
+| :---------- | :-------------------------------------------- | :-------------------------- | :----------- |
+| **ENG-591** | 🏗️ Setup: Ambiente, Django 5.x e Custom User  | `ENG-591-setup-core`        | ✅ Concluído |
+| **ENG-592** | 🎨 Frontend: Integração de Templates e Assets | `ENG-592-frontend-base`     | ✅ Concluído |
+| **ENG-593** | 📚 Backend: App Courses e Models              | `ENG-593-courses-models`    | ✅ Concluído |
+| **ENG-594** | 🖼️ Frontend: Listagem e Detalhes do Curso     | `ENG-594-courses-views`     | ✅ Concluído |
+| **ENG-595** | 📧 Feature: Formulário de Contato             | `ENG-595-contact-form`      | ✅ Concluído |
+| **ENG-596** | 🔐 Auth: Login, Logout e Cadastro             | `ENG-596-auth-system`       | ✅ Concluído |
+| **ENG-597** | 👤 User: Dashboard e Edição de Perfil         | `ENG-597-user-dashboard`    | ✅ Concluído |
+| **ENG-598** | 🔑 Security: Reset de Senha                   | `ENG-598-password-reset`    | 📝 A Fazer   |
+| **ENG-599** | 🎟️ Core: Motor de Inscrições                  | `ENG-599-enrollment-engine` | 📝 A Fazer   |
+| **ENG-600** | 🎓 UX: Dashboard do Aluno e Decorators        | `ENG-600-student-area`      | 📝 A Fazer   |
+| **ENG-601** | 📢 Feature: Mural de Avisos e E-mails         | `ENG-601-announcements`     | 📝 A Fazer   |
+| **ENG-602** | 📺 Content: Aulas e Materiais                 | `ENG-602-lessons-materials` | 📝 A Fazer   |
+| **ENG-603** | 💬 Forum: Tópicos e Respostas                 | `ENG-603-forum-structure`   | 📝 A Fazer   |
+| **ENG-604** | ✅ Feature: Resposta Correta e Ajax           | `ENG-604-forum-ajax`        | 📝 A Fazer   |
+| **ENG-605** | 🧪 QA: Testes Automatizados                   | `ENG-605-tests-coverage`    | 📝 A Fazer   |
+| **ENG-606** | 🚀 DevOps: Preparação para Deploy             | `ENG-606-production-ready`  | 📝 A Fazer   |
 
 > **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer
 

@@ -104,3 +104,8 @@ AUTH_USER_MODEL = 'accounts.User'
 # Configuração de E-mail (Enviar para o console em desenvolvimento)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'tinalmeid@gmail.com' # E-mail do Admin
+
+# Rotas de Autenticação
+LOGIN_URL = 'accounts:login' # Se tentar acessar uma página protegida, será redirecionado para essa URL
+LOGIN_REDIRECT_URL = 'accounts:dashboard'  # Após o login, será redirecionado para o dashboard
+LOGOUT_REDIRECT_URL = 'home' # Após o logout, será redirecionado para a home
