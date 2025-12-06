@@ -180,8 +180,8 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 | **ENG-594** | 🖼️ Frontend: Listagem e Detalhes do Curso     | `ENG-594-courses-views`     | ✅ Concluído    |
 | **ENG-595** | 📧 Feature: Formulário de Contato             | `ENG-595-contact-form`      | ✅ Concluído    |
 | **ENG-596** | 🔐 Auth: Login, Logout e Cadastro             | `ENG-596-auth-system`       | ✅ Concluído    |
-| **ENG-597** | 👤 User: Dashboard e Edição de Perfil         | `ENG-597-user-dashboard`    | 🔄 Em Andamento |
-| **ENG-598** | 🔑 Security: Reset de Senha                   | `ENG-598-password-reset`    | 📝 A Fazer      |
+| **ENG-597** | 👤 User: Dashboard e Edição de Perfil         | `ENG-597-user-dashboard`    | ✅ Concluído    |
+| **ENG-598** | 🔑 Security: Reset de Senha                   | `ENG-598-password-reset`    | 🔄 Em Andamento |
 | **ENG-599** | 🎟️ Core: Motor de Inscrições                  | `ENG-599-enrollment-engine` | 📝 A Fazer      |
 | **ENG-600** | 🎓 UX: Dashboard do Aluno e Decorators        | `ENG-600-student-area`      | 📝 A Fazer      |
 | **ENG-601** | 📢 Feature: Mural de Avisos e E-mails         | `ENG-601-announcements`     | 📝 A Fazer      |
