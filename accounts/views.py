@@ -3,7 +3,7 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth.forms import PasswordChangeForm
-from django.contrib.auth import login
+from django.contrib.auth import login, update_session_auth_hash
 from django.contrib import messages
 from .forms import AccountUserCreationForm, AccountUserChangeForm
 
@@ -52,7 +52,8 @@ def edit_password(request):
     form = PasswordChangeForm(data=request.POST or None, user=request.user)
     if form.is_valid():
         form.save()
+        update_session_auth_hash(request, form.user)
         messages.success(request, 'Senha alterada com sucesso!')
-        return redirect('accounts:login')
+        return redirect('accounts:dashboard')
     context = {'form': form}
     return render(request, 'accounts/edit_password.html', context)
