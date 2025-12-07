@@ -26,7 +26,7 @@ class AccountUserChangeForm(UserChangeForm):
     """Formulário de edição de usuário customizado."""
     class Meta:
         model = User
-        # Listo os campos que podem ser editados no Admin
+        # Lista os campos que podem ser editados pelo usuário
         fields = ('username', 'email', 'name')
 
     # Remove o campo de senha do formulário de edição (apenas por boas práticas)
