@@ -45,7 +45,6 @@ endblock %} {% block content %}
 
         <form class="pure-form pure-form-stacked" method="post">
           {% csrf_token %}
-
           <fieldset>
             {{ form.as_p }}
             <div class="pure-controls">

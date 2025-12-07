@@ -21,23 +21,34 @@
       <div class="header">
         <div class="pure-menu pure-menu-horizontal pure-menu-fixed">
           <a class="pure-menu-heading" href="{% url 'home' %}">SIMPLE MOOC</a>
+
           <ul class="pure-menu-list">
             <li
-              class="pure-menu-item{% if request.path == '/' %} pure-menu-selected{% endif %}"
+              class="pure-menu-item{% if request.resolver_match.url_name == 'home' %} pure-menu-selected{% endif %}"
             >
               <a href="{% url 'home' %}" class="pure-menu-link">Início</a>
             </li>
+
             <li
-              class="pure-menu-item{% if '/cursos/' in request.path %} pure-menu-selected{% endif %}"
+              class="pure-menu-item{% if 'courses' in request.resolver_match.namespaces %} pure-menu-selected{% endif %}"
             >
               <a href="{% url 'courses:index' %}" class="pure-menu-link"
                 >Cursos</a
               >
             </li>
+
             <li
-              class="pure-menu-item{% if '/contato/' in request.path %} pure-menu-selected{% endif %}"
+              class="pure-menu-item{% if request.resolver_match.url_name == 'contact' %} pure-menu-selected{% endif %}"
             >
               <a href="{% url 'contact' %}" class="pure-menu-link">Contato</a>
+            </li>
+
+            <li
+              class="pure-menu-item{% if request.resolver_match.url_name == 'login' %} pure-menu-selected{% endif %}"
+            >
+              <a href="{% url 'accounts:login' %}" class="pure-menu-link"
+                >Entrar</a
+              >
             </li>
           </ul>
         </div>
