@@ -31,12 +31,12 @@ def register(request):
 # --- 2. DASHBOARD (Adicionando a segurança que falta) ---
 
 @login_required
-@require_http_methods(["GET"]) # <--- ADICIONE ISTO AQUI (Para o Sonar)
+@require_http_methods(["GET"])
 def dashboard(request):
     return render(request, 'accounts/dashboard.html')
 
 @login_required
-@require_http_methods(["GET", "POST"]) # <--- E ISTO AQUI
+@require_http_methods(["GET", "POST"])
 def edit_account(request):
     form = AccountUserChangeForm(instance=request.user, data=request.POST or None)
     if form.is_valid():
@@ -47,7 +47,7 @@ def edit_account(request):
     return render(request, 'accounts/edit_account.html', context)
 
 @login_required
-@require_http_methods(["GET", "POST"]) # <--- E ISTO AQUI TAMBÉM
+@require_http_methods(["GET", "POST"])
 def edit_password(request):
     form = PasswordChangeForm(data=request.POST or None, user=request.user)
     if form.is_valid():
