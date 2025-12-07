@@ -5,6 +5,7 @@ from model_bakery import baker
 from django.core import mail
 from django.urls import reverse
 from django.conf import settings
+from django.test import Client
 
 # Garante que o Django use o nosso User Model customizado
 settings.AUTH_USER_MODEL = 'accounts.User'
@@ -132,3 +133,34 @@ class AccountFormTests(TestCase):
         # Recarregamos o usuário para verificar a mudança
         user.refresh_from_db()
         self.assertEqual(user.name, 'Updated Name')
+
+class DashboardTests(TestCase):
+    """Testes para o Painel do Usuário e Edição de conta (ENG-597)."""
+
+    def setUp(self):
+        # Cria um usuário para os testes de login
+        self.user = User.objects.create_user(
+            username='dashboard_user',
+            email='dashb@teste.com',
+            password='password123'
+        )
+        self.client = Client()
+
+    def test_dashboard_view_requires_login(self):
+        """Deve redirecionar para login se o usuário não estiver autenticado."""
+        url = reverse('accounts:dashboard')
+        response = self.client.get(url)
+        # 302 Found: redireciona para login
+        self.assertEqual(response.status_code, 302)
+        # Verifica se redireciona para a página de login
+        self.assertIn('/contas/login/', response.url)
+
+    def test_dashboard_view_logged_in(self):
+        """Usuário logado deve acessar o dashboard com sucesso."""
+        self.client.login(username='dashboard_user', password='password123')
+        url = reverse('accounts:dashboard')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Olá, dashboard_user')
+
+

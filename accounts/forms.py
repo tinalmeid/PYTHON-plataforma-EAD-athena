@@ -23,11 +23,11 @@ class AccountUserCreationForm(UserCreationForm):
         return email
 
 class AccountUserChangeForm(UserChangeForm):
-    """Formulário de edição de usuário customizado (usado no Admin)."""
+    """Formulário de edição de usuário customizado."""
     class Meta:
         model = User
-        # Listamos todos os campos que podem ser editados no Admin
-        fields = ('username', 'email', 'name', 'is_active', 'is_staff')
+        # Lista os campos que podem ser editados pelo usuário
+        fields = ('username', 'email', 'name')
 
-    # Removemos o campo de senha do formulário de edição (apenas por boas práticas)
+    # Remove o campo de senha do formulário de edição (apenas por boas práticas)
     password = None

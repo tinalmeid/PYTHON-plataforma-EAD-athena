@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% block title %}Editar Conta | {{ block.super }}{%
+endblock %} {% block content %}
+<div class="content">
+  <div class="pure-g content-ribbon">
+    <div class="pure-u-1">
+      <div class="l-box">
+        <h2>Editar Conta</h2>
+
+        <div class="pure-menu pure-menu-horizontal">
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item">
+              <a href="{% url 'accounts:dashboard' %}" class="pure-menu-link"
+                >Meus Cursos</a
+              >
+            </li>
+            <li class="pure-menu-item pure-menu-selected">
+              <a href="{% url 'accounts:edit_account' %}" class="pure-menu-link"
+                >Editar Conta</a
+              >
+            </li>
+            <li class="pure-menu-item">
+              <a
+                href="{% url 'accounts:edit_password' %}"
+                class="pure-menu-link"
+                >Alterar Senha</a
+              >
+            </li>
+          </ul>
+        </div>
+        <hr />
+
+        {% if messages %} {% for message in messages %}
+        <div
+          class="l-box"
+          style="
+            background: #d1fae5;
+            color: #065f46;
+            margin-bottom: 1em;
+            border-radius: 4px;
+          "
+        >
+          {{ message }}
+        </div>
+        {% endfor %} {% endif %}
+
+        <form class="pure-form pure-form-stacked" method="post">
+          {% csrf_token %}
+          <fieldset>
+            {{ form.as_p }}
+            <div class="pure-controls">
+              <button type="submit" class="pure-button primary-button">
+                Salvar Alterações
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
